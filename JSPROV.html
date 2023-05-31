@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Måns JSPROV</title>
+</head>
+<body>
+
+    <p id="demo">Mitt namn är Måns</p>
+    
+    <img id="bild" src="originalbild.jpg" alt="">
+
+    <form>
+        <label for="input">Skriv något här:</label>
+        <input type="text" id="input" name="input">
+        <button type="button" onclick="Nr5()">Visa innehåll</button>
+    </form>
+    
+    <script>
+
+        // fråga 1
+        function Nr1() {
+            let num1 = parseFloat(prompt("Enter the first number:"));
+            let num2 = parseFloat(prompt("Enter the second number:"));
+            let sum = num1 + num2;
+            alert("The sum of " + num1 + " and " + num2 + " is " + sum);
+        }
+
+        Nr1()
+
+        // fråga 2
+        document.getElementById("demo").innerHTML = "Hej";
+    
+        // fråga 3
+        function Nr3() {
+            var bild = document.getElementById("bild");
+            bild.src = "bild.jpg";
+        }
+
+        Nr3()
+
+        // fråga 4
+        function Nr4(arr) {
+            return arr.map(num => num - 1);
+        }
+
+        const numbers = [1, 2, 3, 4, 5];
+        const newNumbers = Nr4(numbers);
+        alert(newNumbers); // [0, 1, 2, 3, 4]
+
+
+        //fråga 5
+        function Nr5() {
+            var input = document.getElementById("input");
+            alert(input.value);
+        }    
+        
+
+    </script>
+
+</body>
+</html>
